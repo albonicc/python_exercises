@@ -18,6 +18,9 @@ def even(number):
 #it will stop when the return value of collatz() is 1
 num = 0
 while collatz(num) != 1:
-    num =int(input())
-    collatz(num)
-    print(collatz(num))
+    try:
+        num =int(input())
+        collatz(num)
+        print(collatz(num))
+    except:
+        print("An integer must be entered!")
