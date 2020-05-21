@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nicolas Albo</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="css/blog.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_MX/sdk.js#xfbml=1&version=v7.0"></script>
+  <i class="icon-menu burger-button" id="burger-menu"></i>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <figure>
+            <img src="images/logo.png" height="100" width="200" alt="Logo de http://nicolasalbo.com">
+          </figure>
+        </a> 
+      </div>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href=index.html#portafolio>Portfolio</a>
+          </li>
+          <li>
+            <a href="blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="#contacto">More info</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text">
+          <h1>
+              <span>Blog</span><br> Here I will be posting about technologies of the past and future!
+            </h1>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero-blog.jpeg" alt="imagen" height="300px" width="300px"></div>
+    </div>
+  </section>
+  <section class="blog">
+      <div class="container">
+          <article class="blog-post">
+            <h3 class=blog-post-title> Capítulo 1: Arquitecutra de computadoras</h3>
+            <h4 class="pregunta"> 1. ¿Cuáles son las principales diferencias entre las arquitecturas Von Neumann y Harvard?</h4>
+            <p class="respuesta">La  principal diferencia es que la arquitectura Von-Neumann guarda en la misma memoria los datos y las instrucciones, mientras que la Harvard tiene una memoria para datos y otra para las instrucciones. La ventaja de la Harvard es que es menos susceptible a fallar durante la ejecución de un programa, pero por otro lado, necesita el doble de buses para poder trabajar.</p> 
+            <h4 class="pregunta"> 2. ¿Qué son y para qué sirven los registros de OPCODE y ADDRESS?</h4>
+            <p class="respuesta">Una instrucción está compuesta de dos partes: el OPCODE que es un código de operación para una instrucción que tiene que ejecutar el procesador y ADRESS, que se refiere a la localidad de memoria donde está guardada dicha instrucción.</p> 
+            <h4 class="pregunta"> 3. Empleando Marie, desarrolle un ejemplo que permita comprender la forma en la que se puede visualizar los registros de la computadora como se muestra en la imagen. Use un programa que le permita usar la mayor cantidad de registros (de preferencia todos)</h4>
+            <div class="img-blog-container">
+              <img class="img-blog" src="images/marie_ejemplo.png" alt="marie_ejemplo">
+            </div>
+            <p class="respuesta"><br><br><br></p>
+            <div class="img-blog-container">
+              <img class="img-blog" src="images/code_1.png" alt="Código Marie parte 1">
+            </div>
+            <div class="img-blog-container">
+              <img class="img-blog" src="images/code_2.png" alt="Código Marie parte 2">
+            </div>
+            <div class="img-blog-container">
+              <img class="img-blog" src="images/code_3.png" alt="Código Marie parte 3">
+            </div>
+            <h4 class="pregunta"> 4. ¿Qué es un ciclo de instrucción y que se obtiene al implementar pipelining en el diagrama de estado?</h4>
+            <p class="respuesta">Un ciclo de instrucción es el periodo que tarda un procesador para ejecutar una instrucción. Durante este periodo, el procesador debe de buscar la instrucción en la memoria principal, decodificarla, ejecutarla y finalmente almacenar el resultado en alguna localidad de memoria.</p>
+            <p class="respuesta">El pipelining es simplemente una técnica que consiste en ejecutar determinadas acciones mutuamente excluyentes en paralelo, siempre y cuando se cumplan ciertas condiciones. Al implementar esta técnica en el diagrama de estado, se logra aumentar el rendimiento del procesador.</p>  
+            <h4 class="pregunta"> 5. Describa el mapeo en memoria para un procesador con interrupciones habilitadas.</h4>
+            <p class="respuesta">Durante el ciclo de instrucción, el ciclo de interrupciones es añadido. Posteriormente el procesador verifica si existe una interrupción:  si existe, se suspende la ejecución del programa actual,  y se guarda el contexto del mismo, después, el PC apunta a la dirección de inicio del interrupt handler, procesa la interrupción y finalmente restaura el contexto y continúa con el programa interrumpido; si no existe una interrupción, el procesador hace fetch a la siguiente instrucción </p>
+            <div class="img-blog-container">
+              <img class="img-blog" src="images/interrupt_memory.png" alt="interrupt_memory">
+            </div>
+            <h4 class="pregunta"> 6. Describa la importancia de tener jerarquías en los buses de datos.</h4>
+            <p class="respuesta">Al existir diferentes velocidades de transmisión de datos entre los distintos módulos de una computadora, se requieren buses especiales que puedan definir trayectorias críticas de datos.</p> 
+            <h4 class="pregunta"> 7. Suponga que un procesador para realizar una operación por el bus, requiere de 4 ciclos de reloj. ¿Cuál es la tasa de transferencia máxima que el procesador puede establecer (en MBs), si el reloj es de 500MHz y el bus es de a)16 bits, b)32 bits y c)64 bits?</h4>
+            <p class="respuesta">Para calcular la tasa de transferencia máxima del procesador (en MB/s), se necesita seguir la siguiente fórmula:</p>
+            <p class="respuesta">((frecuencia de reloj  / # de ciclos de reloj por instrucción) x tamaño del bus) / 8E6</p> 
+            <p class="respuesta">Una vez aplicada la fórmula mencionada previamente, se obtienen los siguientes resultados para cada caso:</p>
+            <p class="respuesta">a) 250 MB/s <br> b) 500 MB/s <br>c) 1000 MB/s </p>   
+            <h4 class="pregunta"> 8. En un bus PCI-express se requiere de entender los conceptos de voltajes diferenciales, lane y link. Explique estos conceptos en un bus PCI-express x4</h4>
+            <p class="respuesta">En un bus PCI-express x4, se utilizan voltajes diferenciales para eliminar el ruido que puede ser recibido en las pistas del bus, esto se logra al duplicar la señal recibida pero invertida 180°.</p>
+            <p class="respuesta">En un bus PCI-express, el número que sigue después de la “x” representa el número de lanes del bus. Al ser el bus PCI-express x4, este cuenta con 4 lanes, donde cada lane tiene un par de cables, un cable para mandar datos y otro para recibir. También el número que sigue después de la “X” representa el número de links del bus. En este caso el número de links sería 4, lo que significa que se transfieren 4 bits por cada ciclo.</p>
+            <div class="img-blog-container">
+              <img class="img-blog" src="images/pci_express.png" alt="PCI-express">
+            </div>
+        </article>
+        <article class="blog-post">
+            <h3 class=blog-post-title> Capítulo 2: Arquitecutra de computadoras</h3>
+            <h4 class="pregunta"> 1. Describa la forma en la que se definen las computadoras de una sola tablilla como el caso de la Raspberry.</h4>
+            <p class="respuesta">LSon computadoras que cuentan todas las características de una computadora funcional como un procesador, memoria RAM, y pines de entradas y salidas; pero con la peculiaridad que son de tamaño reducido y todos los componentes existen dentro de una placa base.</p>
+            <div class="img-blog-container">
+              <img class="img-blog" src="images/Rpi.png" alt="Raspberry Pi Model 3 B+"> 
+            </div>
+            <h4 class="pregunta"> 2. Describa la forma en la que se habilita UART e I2C a partir de Raspbian.</h4>
+            <p class="respuesta">La forma más sencilla de habilitar UART e I2C en Raspbian es haciendo click en el símbolo de la frambuesa, de ahí a preferences y finalmente en Raspberry Pi Configuration. A continuación se abrirá la ventana de Raspberry Pi Configuration, despues hacemos click en la pestaña de interfaces y hacemos click en Enable para I2C y Serial Port. Una vez hecho esto, los puertos UART e I2C quedan habilitados.</p>
+            <div class="img-blog-container">
+              <img class="img-blog" src="images/config_raspbian.png" alt="Configuratción interfaces de Raspbian">
+            </div>
+            <h4 class="pregunta"> 3. Defina cómo se hace la comunicación de varios elementos en I2C y como se maneja una memoria bajo ese protocolo de comunicación.</h4>
+            <p class="respuesta">En el protocolo I2C, un dispositivo maestro puede tener tener comunicación con uno o más dispositivos esclavos. Dicho protocolo solo cuenta con dos pines: SDA (Serial Data) y SCL (Serial Clock). La comunicación I2C hace uso de 8 bits o un byte, los bits que van del 1 al 7 representan la dirección de cada dispositivo esclavo, mientras que el bit 0 representa si el dispositivo maestro quiere escribir (bit 0 con valor “0”) o leer (bit 0 con valor “1”) los datos del dispositivo esclavo seleccionado.</p>
+            <div class="img-blog-container">
+              <img class="img-blog" src="images/i2c.png" alt="Explicación protocolo I2C">
+            </div>
+            <p class="respuesta">Una memoria que esté configurada como dispositivo esclavo, lee los 8 bits que manda la señal emitida por el dispositivo maestro y dependiendo del estado del bit 0, guarda la información que le manda el dispositivo maestro o le regresa la información que tenga guardada en memoria.</p> 
+            <h4 class="pregunta"> 4. Explique la modularización de una computadora y la forma en la que llevó ese concepto en la práctica que se llevó a cabo en este capítulo.</h4>
+            <p class="respuesta">El proceso de modularización consiste en dividir o descomponer el programa en distintos módulos, donde el programa principal tiene que llamar a cada módulo cada vez que necesite algo de él.</p>
+            <p class="respuesta">En el caso de la práctica, se hizo la modularización de la memoria del sistema y de la matriz de LEDs. Donde la Raspberry Pi actuaba como la CPU del sistema y se conectaba con los diferentes periféricos (módulos) a través de determinados protocolos de comunicación: I2C para la memoria y UART para la matriz de LEDS.</p>  
+            <h4 class="pregunta"> 5. Demuestre la forma en la que su raspberry es definida como un servidor y al menos una herramienta que se puede habilitar.</h4>
+            <p class="respuesta">Una Raspberry Pi, al igual que cualquier otra puede funcionar como servidor siempre y cuando se haga la configuración adecuada. Por ejemplo, en el caso de un servidor web, se puede hacer una configuración LAMP (Linux, Apache, MySQL y PHP). Si tenemos Raspbian como sistema operativo, ya cumplimos con el requisito de Linux. Apache sería nuestro servidor web HTTP, MySQL la base de datos y PHP el lenguaje de backend.</p>
+            <div class="img-blog-container">
+              <img class="img-blog" src="images/lamp.png" alt="Stack Lamp">
+            </div>
+            <h4 class="pregunta"> 6. Describa la forma en la que se puede instalar un sistema operativo en la raspberry.</h4>
+            <p class="respuesta">Para instalar un sistema operativo en la Raspberry Pi, se necesita hacer uso de la herramienta NOOBS, la cuál se puede descargar desde: <a href="https://www.raspberrypi.org/downloads/noobs/">https://www.raspberrypi.org/downloads/noobs/</a></p>
+            <p class="respuesta">Si se quiere instalar Raspbian como sistema operativo, entonces descargamos el NOOBS normal, pero si por otro lado, se quiere instalar un sistema operativo distinto, se tiene que descargar NOOBS Lite y la copia del sistema operativo que se quiere instalar.</p>
+            <p class="respuesta">Una vez hecho lo anterior, dependiendo del modelo de la Raspberry Pi, se necesita montar NOOBS con el sistema operativo dentro de una tarjeta SD o microSD de mínimo 16GB de memoria. Para ello, se tiene que formatear la tarjeta SD o microSD en configuración fat32, y posteriormente copiar y pegar el contenido del archivo NOOBS que descargamos en la memoria.</p>
+            <p class="respuesta">Después se tiene que insertar la memoria en la Raspberry Pi y conectar el cable para encenderla. La primera vez que se usa una Raspberry Pi, se necesita conectar una pantalla, un teclado y un mouse. Una vez encendida, solo hay que seguir las instrucciones en pantalla y ¡listo! La Raspberry Pi tienen un sistema operativo instalado y está lista para usarse.</p>
+            <div class="img-blog-container">
+              <img class="img-blog" src="images/fondo_raspbian.png" alt="Fondo Raspbian">
+            </div>
+            </article>
+      </div>
+  </section>
+  <section class="fb-box">
+      <div class="container">
+          <div class="fb-adjust">
+            <div class="fb-comments" data-href="http://nicolasalbo.com/blog.html" data-numposts="5" data-width="100%"></div>
+          </div>
+      </div>
+  </section>
+  <section id="contacto" class="contact">
+    <div class="container">
+      <form class="email">
+        <h2 class="email-title">Contact me!</h2>
+        <div class="email-container">
+            <input class="email-input" placeholder="Leave your email" type="text" />
+            <button class="email-submit" type="submit">Send</button>
+        </div>
+      </form>
+      <div class="social">
+        <a target="_blank" class="social-link twitter" href="https://twitter.com/albonicc">
+        </a>
+        <a target="_blank" class="social-link linkedin" href="https://www.linkedin.com/in/nicolasalbom/">
+        </a>
+        <a target="_blank" class="social-link github" href="https://github.com/albonicc">
+        </a>
+        <a target="_blank" class="social-link instagram" href="https://instagram.com/albonicc">
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inspiration">
+        <p><small>Inspired by the template shown in: <br>Curso de desarrollo web online 2018 -</small> <img src="./images/platzi.png" width="50"> </p>
+      </div>
+      <div class="footer-logo">
+        <p><small>Logo Designed with <\3 by <a href="https://instagram.com/alnvisual">@alnvisual</a></small></p>
+      </div>
+    </div>
+  </footer> 
+  <script src="burger_button.js">
+  </script>
+</body>
+</html> 

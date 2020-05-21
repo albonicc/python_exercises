@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nicolas Albo</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+  <i class="icon-menu burger-button" id="burger-menu"></i>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <figure>
+            <img src="images/logo.png" height="100" width="200" alt="Logo de http://nicolasalbo.com">
+          </figure>
+        </a>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href="#portafolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="#contacto">More info</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text">
+          <h1>
+              Hello everyone out there! <br> My name is <span>Nicolas Albo</span> <br> I'm just a <span>Mexican</span> &#x1F1F2;&#x1F1FD; <br> dreaming with the <span>future</span>
+            </h1>
+      </div>
+      <div class="hero-image"><img src="images/hero.png" alt="imagen" height="300px" width="300px"></div>
+    </div>
+  </section>
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class=portfolio-title>
+          <h2>Portfolio (Remarkable Projects)</h2>
+      </div>
+      <article class="project">
+        <div class="project-description">
+          <h3 class="project-title">Pong VHDL</h3>
+          <h5 class="project-tech">VHDL / Nexys 2 FPGA</h5>
+          <p class="project-date"><small><strong>Date:</strong> May 8th, 2019</small></p>
+          <p class="project-url"><small><strong>You can watch it at:</strong> <a href="https://github.com/albonicc/Pong-VHDL">www.github.com/albonicc/Pong-VHDl</a></small></p>
+          <p>Tribute to the classical videogame Pong designed in VHDL and implemented in a Nexys 2 Spartan-3E FPGA Trainer Board. 
+              The ball movements are completely aleatory because there's no Random Function like in High-Level Programming Languages. My team and I used
+              the code of a Cellular Automata provided by our professor of the Advanced Digital Systems course in order to fullfil this task.
+              <br>
+              <br>
+              The project won the 1st place in the CS section of an Engineering competition at my University Campus.
+          </p>
+        </div>
+        <figure class="project-imageContainer">
+          <img class="project-image" src="images/pong_VHDL.jpg" width="500" alt="Pong-VHDL picture"/>
+        </figure>
+      </article>
+      <article class="project">
+        <div class="project-description">
+          <h3 class="project-title">Bluetooth Arduino WALL-E</h3>
+          <h5 class="project-tech">Arduino / Bluetooth</h5>
+          <p class="project-date"><small><strong>Date:</strong> June 8th, 2019</small></p>
+          <p class="project-url"><small><strong>You can watch it at:</strong> <a href="https://www.nicolasalbo.com">www.nicolasalbo.com</a></small></p>
+          <p> Just made a Bluetooth Wireless WALL-E like robot using an Arduino UNO. The robot can move to the front and back, also 
+              it can rotate clockwise or counterclockwise. It includes 2 servomotors so it can move its head in the direction he's going
+              to rotate. 
+              <br>
+              <br>  
+              For controlling WALL-E, an Android Cellphone with the 'Naylamp Car' app is required, otherwise it may not work.
+        </div>
+        <figure class="project-imageContainer">
+          <img class="project-image" src="images/walle_closeup.jpg" width="500"  alt="Bluetooth Arduino WALL-E"/>
+        </figure>
+      </article>
+      <!-- <article class="project">
+        <div class="project-description">
+          <h3 class="project-title">Project 3</h3>
+          <h5 class="project-tech">React Native / React</h5>
+          <p class="project-date"><small><strong>Date:</strong>ddddd</small></p>
+          <p class="project-url"><small><strong>Puedes verlo en:</strong> <a href="https://something">www.something</a></small></p>
+          <p> Lorem Ipsum........................</p>
+        </div>
+        <figure class="project-imageContainer">
+          <img class="project-image" src="images/project3" width="500" alt="Proyect 3"/>
+        </figure>
+      </article>  -->
+     </div>
+  </section>
+  <section id="contacto" class="contact">
+    <div class="container">
+      <form class="email">
+        <h2 class="email-title">Contact me!</h2>
+        <div class="email-container">
+            <input class="email-input" placeholder="Leave your email" type="text" />
+            <button class="email-submit" type="submit">Send</button>
+        </div>
+      </form>
+      <div class="social">
+        <a target="_blank" class="social-link twitter" href="https://twitter.com/albonicc">
+        </a>
+        <a target="_blank" class="social-link linkedin" href="https://www.linkedin.com/in/nicolasalbom/">
+        </a>
+        <a target="_blank" class="social-link github" href="https://github.com/albonicc">
+        </a>
+        <a target="_blank" class="social-link instagram" href="https://instagram.com/albonicc">
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inspiration">
+        <p><small>Inspired by the template shown in: <br>Curso de desarrollo web online 2018 -</small> <img src="./images/platzi.png" width="50"> </p>
+      </div>
+      <div class="footer-logo">
+        <p><small>Logo Designed with <\3 by <a href="https://instagram.com/alnvisual">@alnvisual</a></small></p>
+      </div>
+    </div>
+  </footer> 
+  <script src="burger_button.js">
+  </script>
+</body>
+</html> 
